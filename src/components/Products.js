@@ -16,7 +16,7 @@ function Products({ id, title, price, description, category, image, widthvalue})
 
     const addItemToBasket = () => {
         const product = {
-            id, title, price, description, category, image, hasPrime,
+            id, title, price, rating, description, category, image, hasPrime,
         };
 
         // Sending the product as an action to the REDUX store... the basket slice.
@@ -40,7 +40,7 @@ function Products({ id, title, price, description, category, image, widthvalue})
             <p className="text-xs my-2 line-clamp-2">{description}</p>
 
             <div className="mb-5">
-                <Currency quantity={price} currency="EUR"/>
+                <Currency quantity={price} currency="usd"/>
             </div>
             {hasPrime && (
                 <div className="flex items-center space-x-2 -mt-5">

@@ -11,8 +11,7 @@ function Header() {
     const items = useSelector(selectItems);
 
     return (
-        <div>
-            {/* Top nav*/}
+        <header className="sticky top-0 z-50">
             <div className="flex items-center bg-amazon_blue p-1 flex-grow py-2">
                 <div className="flex items-center flex-grow sm:flex-grow-0">
                     <img
@@ -21,7 +20,7 @@ function Header() {
                         width={150}
                         height={40}
                         objectFit="contain"
-                        className="cursor-pointer"
+                        className="mx-2 cursor-pointer"
                     />
                 </div>
                 <div className="hidden sm:flex items-center h-10 flex-grow cursor-pointer rounded-md bg-yellow-400 hover:bg-yellow-500">
@@ -60,7 +59,7 @@ function Header() {
                 <p className="link hidden lg:inline-flex">Shopper Toolkit</p>
                 <p className="link hidden lg:inline-flex">Health & Personal Care</p>
             </div>
-        </div>
+        </header>
     )
 }
 
