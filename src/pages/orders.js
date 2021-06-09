@@ -1,7 +1,7 @@
 import { getSession, useSession } from "next-auth/client";
 import moment from 'moment';
 import db from "../../firebase";
-import Order from "./order";
+import Order from "./Order";
 
 const { default: Header } = require("../components/Header");
 
