@@ -23,25 +23,32 @@ function Header() {
                         className="mx-2 cursor-pointer"
                     />
                 </div>
-                <div className="hidden sm:flex items-center h-10 flex-grow cursor-pointer rounded-md bg-yellow-400 hover:bg-yellow-500">
+                <div className="invisible lg:visible xl:visible 2xl:visible flex items-center h-10 flex-grow cursor-pointer rounded-md bg-yellow-400 hover:bg-yellow-500">
                     <input className="p-2 h-full w-6 flex-grow flex-shrink rounded-l-md focus:outline-none px-4" type="text" />
                     <SearchIcon className="h-12 p-4"/>
                 </div>
                 {/* Right Section */}
                 <div className="text-white flex items-center text-xs space-x-6 mx-6 whitespace-nowrap">
                     <div onClick={!session ? signIn:signOut} className="link">
-                        <p>{session ? `Hello, ${session.user.name}`: "Sign in"}</p>
+                        <p className="text-lg">{session ? `Hello, ${session.user.name}`: "Sign in"}</p>
                         <p className="font-extrabold md:text-sm">Account & Lists</p>
                     </div>
                     <div onClick={()=> session && router.push('/orders')} className="link">
-                        <p>Returns </p>
-                        <p className="font-extrabold md:text-sm">& Orders</p>
+                        <p className="text-lg">Orders </p>
+                        <p className="font-extrabold md:text-sm">& returns</p>
                     </div>
                     <div onClick={() => router.push('/checkout')} className="relative link flex items-center">
                         <span className="absolute top-0 right-0 md:right-11 h-4 w-4 bg-yellow-400 text-center rounded-full text-black font-bold">{items.length}</span>
                         <ShoppingCartIcon className="h-10"/>
-                        <p className="hidden md:inline font-extrabold md:text-sm mt-2">Basket</p>
+                        <p className="hidden md:inline font-extrabold md:text-lg mt-2">Basket</p>
                     </div>
+                </div>
+            </div>
+            {/* Phone Search */}
+            <div className="flex lg:hidden xl:hidden 2xl:hidden items-center bg-amazon_blue p-4 flex-grow py-2">
+                <div className="flex items-center h-10 flex-grow cursor-pointer rounded-md bg-yellow-400 hover:bg-yellow-500">
+                        <input className="p-2 h-full w-2 flex-grow flex-shrink rounded-l-md focus:outline-none px-4" type="text" />
+                        <SearchIcon className="h-12 p-4"/>
                 </div>
             </div>
             {/* Bottom nav*/}

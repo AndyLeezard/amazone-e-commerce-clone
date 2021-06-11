@@ -14,16 +14,22 @@ function Banner() {
                 interval={4000}
             >
                 <div>
-                    <img loading="lazy" src="img/home_demo_safe.jpg" alt="" />
+                    <img loading="lazy" src="img/home_demo_safe_eng5.jpg" alt="" />
                 </div>
                 <div>
-                    <img loading="lazy" src="img/home_demo2_safe.jpg" alt="" />
+                    <img loading="lazy" src="img/home_demo_safe_eng3.jpg" alt="" />
                 </div>
                 <div>
-                    <img loading="lazy" src="img/home_demo3_safe.jpg" alt="" />
+                    <img loading="lazy" src="img/home_demo_safe_eng2.jpg" alt="" />
                 </div>
                 <div>
-                    <img loading="lazy" src="img/home_demo4_safe.jpg" alt="" />
+                    <img loading="lazy" src="img/home_demo_safe_eng.jpg" alt="" />
+                </div>
+                <div>
+                    <img loading="lazy" src="img/home_demo_safe_eng4.jpg" alt="" />
+                </div>
+                <div>
+                    <img loading="lazy" src="img/home_demo_safe_eng6.jpg" alt="" />
                 </div>
             </Carousel>
         </div>
