@@ -37,7 +37,7 @@
         "price": 1129.99,
         "description": "Meet one of the finest Fender Telecaster series. Pure and simple, this instrument features classic Fender tone styling that evokes and honors the timeless Fender mainstays that came before it and contributed crucial DNA. From the quietest chord to the loudest note, and from the rear strap button to the top of the head stock, it’s the very essence of classic Fender design.",
         "category": "instruments",
-        "image": "img/product_deploy1.jpg"
+        "image": "https://drive.google.com/uc?export=view&id=1gGySRol7ZrYIUWZqgFrSgSezlacBSWP6"
     },
     {
         "id": 6,
@@ -45,7 +45,7 @@
         "price": 34.99,
         "description": "Standard skateboards use double kick concave design, which not only offers better balance control to starters and easy to brake, but also easy to perform various tricks. It is a cool present for beginners, kids, teens and experienced riders.",
         "category": "sports & outdoors",
-        "image": "img/product_deploy3.jpg"
+        "image": "https://drive.google.com/uc?export=view&id=1cFby1TgZJjYifQqgZxUa5IX7zL1t9-Og"
     },
     {
         "id": 7,
@@ -53,7 +53,7 @@
         "price": 44.90,
         "description": "Poker chip set housed in a silver aluminum case also includes two decks of playing cards.",
         "category": "electronics",
-        "image": "img/product_deploy5.jpg"
+        "image": "https://drive.google.com/uc?export=view&id=1pANZ95vrnO3yn_HfPDuhwWronAlODaeK"
     },
     {
       "id": 8,
@@ -69,7 +69,7 @@
         "price": 3150.99,
         "description": "Meet one of the best graphics cards for mining and gaming. The all-new NVIDIA Ampere architecture delivers the ultimate play, featuring advanced 2nd generation Ray Tracing Cores and 3rd generation Tensor Cores with greater throughput.",
         "category": "electronics",
-        "image": "img/product_deploy2.jpg"
+        "image": "https://drive.google.com/uc?export=view&id=1pg5uAPeBQ6n9xfA5fNMCj0wadkaa06dd"
     },
     {
         "id": 10,
@@ -77,7 +77,7 @@
         "price": 120.99,
         "description": "CanaKit Premium High-Gloss Raspberry Pi 4 Case with Integrated Fan Mount, CanaKit Low Noise Bearing System Fan. 128GB Samsung EVO+ Micro SD Card (Class 10) Pre-loaded with NOOBS, USB MicroSD Card Reader.",
         "category": "electronics",
-        "image": "img/product_deploy4.jpg"
+        "image": "https://drive.google.com/uc?export=view&id=1IsF4rsuIHCxAfx4yRbA64zft9trKIRw9"
     },
     {
       "id": 11,
@@ -93,7 +93,7 @@
       "price": 33.21,
       "description": "Seamlessly move content between your USB Type-C smartphone, tablets and Macs and USB Type-A computers.",
       "category": "electronics",
-      "image": "img/product_deploy8.jpg"
+      "image": "https://drive.google.com/uc?export=view&id=1KLvoA-c9vtM5d5YUqY4Mv4SeBDe_32Gq"
     },
     {
       "id": 13,
@@ -133,7 +133,7 @@
       "price": 299.99,
       "description": "Oculus Quest 2 is our most advanced all-in-one VR system yet. Every detail has been engineered to make virtual worlds adapt to your movements, letting you explore awe-inspiring games and experiences with unparalleled freedom.",
       "category": "electronics",
-      "image": "img/product_deploy7.jpg"
+      "image": "https://drive.google.com/uc?export=view&id=1zEdPhXsjka0uZ8jNq84MsWqq0V5vbJYw"
     },
     {
         "id": 18,
@@ -141,7 +141,7 @@
         "price": 209.99,
         "description": "UITABLE FOR GAMING AND WORKING：AutoFull is dedicated to making the best gaming chair and creating the most perfect game experience for pro gamers.Dimensions: 20.9''(L) x 20.9''(W) x47.6''-50.8''(H); Sitting Area Dimensions: 16.1''(L) x 20.9''(W)",
         "category": "home office furniture",
-        "image": "img/product_deploy6.jpg"
+        "image": "https://drive.google.com/uc?export=view&id=1gwF9O4rl4EvTBdC-B4-p39eCnomPqU3v"
     },
     {
         "id": 19,
@@ -149,7 +149,7 @@
         "price": 189.99,
         "description": "60'(L)*27'(W)*30'(H) dimension the gaming computer desk can provide massive space to lay 2-3 monitors or screens.It is the perfect addition to your study room, bedroom or office, to serve as a computer desk, home office workstation, study table, writing or gaming desk.",
         "category": "home office furniture",
-        "image": "img/product_deploy9.jpg"
+        "image": "https://drive.google.com/uc?export=view&id=1jYqkhFr1OTLLmABxfXLPdBKS9K7bF4Tk"
     },
     {
       "id": 20,

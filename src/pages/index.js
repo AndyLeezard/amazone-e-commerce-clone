@@ -4,6 +4,7 @@ import Banner from "../components/Banner";
 import Header from "../components/Header";
 import ProductFeed from "../components/ProductFeed";
 import Prod from "../products/products.json";
+import Footer from "../components/Footer";
 
 export default function Home({ products }) {
   return (
@@ -21,6 +22,7 @@ export default function Home({ products }) {
         {/*<ProductFeed products={products}/>*/}
         <ProductFeed products={Prod}/>
       </main>
+      <Footer/>
     </div>
   );
 }

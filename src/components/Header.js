@@ -31,7 +31,7 @@ function Header() {
                 <div className="text-white flex items-center text-xs space-x-6 mx-6 whitespace-nowrap">
                     <div onClick={!session ? signIn:signOut} className="link">
                         <p className="text-lg">{session ? `Hello, ${session.user.name}`: "Sign in"}</p>
-                        <p className="font-extrabold md:text-sm">Account & Lists</p>
+                        <p className="font-extrabold md:text-sm">{session ? "Sign out": "No session"}</p>
                     </div>
                     <div onClick={()=> session && router.push('/orders')} className="link">
                         <p className="text-lg">Orders </p>
