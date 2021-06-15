@@ -44,7 +44,7 @@ function Loginbutton({ provider_name, provider_id }) {
                             <img className="ml-3.5 w-8 " src={"/"+theIcon()+".svg"} alt="" />
                         </div>
                         <div>
-                            <span className="left-4 text-lg md:text-md lg:text-sm">Sign in with {provider_name}</span>
+                            <span className="font-semibold left-4 text-lg md:text-md lg:text-sm text-gray-700">Sign in with {provider_name}</span>
                         </div>
                     </button>
             </div>): ""}

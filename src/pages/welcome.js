@@ -6,7 +6,7 @@ function welcome() {
         <img onClick={() => router.push('/')} className="link mt-4 mx-auto w-12/12 sm:w-8/12 md:w-6/12 lg:w-4/12" src="/welcome.svg" alt="" />
             <div className="mx-auto flex flex-col text-left w-5/5 sm:w-4/5 md:w-3/5 lg:w-2/5 border rounded-md border-solid border-gray-300 p-5 w-300">
                 <h1 className="text-center text-2xl font-semibold px-1 mb-2">
-                We are glad to have you as our new member.
+                Glad to have you as a new member.
                 </h1>
             </div>
         <div className="mx-auto mt-2">
@@ -16,11 +16,10 @@ function welcome() {
           <button onClick={() => router.push('/')} className="p-2 w-11/12 text-xs font-bold md:text-sm bg-gradient-to-b from-green-200 to-green-400 border border-gray-300 rounded-md focus:outline-none focus:ring-gray-500 active:from-gray-500">Let's get it !</button>
         </div>
         <div className="flex space-x-4 justify-center mx-auto mt-2 mb-4">
-              <p>Conditions of Use</p>
-              <p>Disclaimer</p>
-              <p>Contact & Feedback</p>
+              <a href="/conditions"><p className="font-semibold text-indigo-700 text-sm">Conditions of Use</p></a>
+              <a href="https://www.linkedin.com/in/andy-lee-4b913719a" target="_blank" rel="noopener noreferrer"><p className="font-semibold text-green-600 text-sm">Contact & Feedback</p></a>
         </div>
-        <p className="mb-4">2021, developped and owned by Andy Lee</p>
+        <p className="font-semibold text-gray-600 text-sm my-4">© 2021 | Developed by Andy Lee</p>
     </div>
     )
 }

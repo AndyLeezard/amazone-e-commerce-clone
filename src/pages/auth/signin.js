@@ -71,11 +71,10 @@ export default function signin({ providers}) {
           ))}
         </div>
         <div className="flex space-x-4 justify-center mx-auto mt-2 mb-4">
-              <p>Conditions of Use</p>
-              <p>Disclaimer</p>
-              <p>Contact & Feedback</p>
+              <a href="/conditions"><p className="font-semibold text-indigo-700 text-sm">Conditions of Use</p></a>
+              <a href="https://www.linkedin.com/in/andy-lee-4b913719a" target="_blank" rel="noopener noreferrer"><p className="font-semibold text-green-600 text-sm">Contact & Feedback</p></a>
         </div>
-        <p className="mb-4">2021, developped and owned by Andy Lee</p>
+        <p className="font-semibold text-gray-600 text-sm my-4">© 2021 | Developed by Andy Lee</p>
     </div>
   )
 }
