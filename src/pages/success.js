@@ -19,7 +19,7 @@ function success() {
                         </h1>
                     </div>
                     <p>
-                        Thank you message lorem ipsum dolor sit amet
+                        Example thank you message
                     </p>
                     <button onClick={() => router.push('/orders')} className='button mt-8'>Go to my orders</button>
                 </div>

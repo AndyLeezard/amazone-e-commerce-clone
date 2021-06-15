@@ -13,7 +13,7 @@ function CheckoutProduct({ id, title, price, rating, description, category, imag
     }
 
     return (
-        <div className="grid grid-cols-5 ">
+        <div className="grid grid-cols-5 p-5">
             {/*<Image src={image} height={200} width={400} objectFit="contain"/>*/}
             <img className="mx-auto" style={{height:"200px", width:"200", objectFit:"contain"}} src={image} alt="" />
             {/** Middle */}

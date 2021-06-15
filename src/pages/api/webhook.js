@@ -29,6 +29,7 @@ const fulfillOrder = async (session) => {
         })
         .then(() => {
             console.log(`SUCCESS: Order ${session.id} had been added to the DB`)
+            console.log(`full session data : ${session}`);
         })
 };
 
