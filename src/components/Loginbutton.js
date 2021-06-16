@@ -2,7 +2,7 @@ import { signIn } from 'next-auth/client'
 
 function Loginbutton({ provider_name, provider_id }) {
 
-    const theIcon = () => {
+    /*const theIcon = () => {
         if(provider_name==="Google"){
             //console.log("it matches Google")
             return ("Google")
@@ -22,7 +22,7 @@ function Loginbutton({ provider_name, provider_id }) {
         }else{
             return (true)
         }
-    }
+    }*/
     //console.log(theIcon())
     
     //console.log("provider name : ",provider_name)
@@ -30,7 +30,6 @@ function Loginbutton({ provider_name, provider_id }) {
 
     return (
         <div>
-            {isProvider() ?(
             <div className="flex mb-5" key={provider_name}>
                     <div className="w-3">
                     </div>
@@ -39,13 +38,13 @@ function Loginbutton({ provider_name, provider_id }) {
                         md:text-sm border border-gray-400 hover:border-gray-600 rounded-md focus:bg-gray-600
                         hover:bg-gray-200 focus:text-white" onClick={() => signIn(provider_id)}>
                         <div>
-                            <img className="ml-3.5 w-8 " src={"/"+theIcon()+".svg"} alt="" />
+                            <img className="ml-3.5 w-8 " src={"/"+provider_name+".svg"} alt={"sign in with"+provider_name}/>
                         </div>
                         <div>
                             <span className="font-semibold left-4 text-lg md:text-md lg:text-sm text-gray-700">Sign in with {provider_name}</span>
                         </div>
                     </button>
-            </div>): ""}
+            </div>
         </div>
     )
 }

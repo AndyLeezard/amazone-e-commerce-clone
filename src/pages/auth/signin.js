@@ -8,14 +8,14 @@ export default function signin({ providers}) {
   const [session] = useSession();
   const firebaseUser = auth.currentUser;
 
-  if(firebaseUser){
+  /*if(firebaseUser){
     console.log("SignIn Page: a firebase user is detected - trying to signOut.")
     auth.signOut();
   }
   if(session){
     console.log("SignIn Page: a NextAuth user is detected - trying to signOut.")
     signOut();
-  }
+  }*/
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
