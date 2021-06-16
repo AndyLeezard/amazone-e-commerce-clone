@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { getProviders, signOut, useSession } from 'next-auth/client'
-import Loginbutton from '../../components/Loginbutton'
-import router from 'next/router'
+import { getProviders } from 'next-auth/client'; //signOut, useSession
+import Loginbutton from '../../components/Loginbutton';
+import router from 'next/router';
 import { auth } from '../../../firebase';
 
 export default function signin({ providers}) {
-  const [session] = useSession();
-  const firebaseUser = auth.currentUser;
+  //const [session] = useSession();
+  //const firebaseUser = auth.currentUser;
 
   /*if(firebaseUser){
     console.log("SignIn Page: a firebase user is detected - trying to signOut.")
