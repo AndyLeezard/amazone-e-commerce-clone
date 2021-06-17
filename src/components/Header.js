@@ -32,7 +32,7 @@ function Header() {
             .doc(authUser.email) //fetch the user data and register it inside the collection
             .collection('username') //select(create) a firestore collection named users within the parent collection('users')
             .onSnapshot((doc) => {
-                //console.log("Current data: ", doc);
+                console.log("Current data: ", doc);
                 console.log("Current data: ", doc._delegate._snapshot.docs.keyedMap.root.value.data.value.mapValue.fields.username.stringValue);
                 setUsername(doc._delegate._snapshot.docs.keyedMap.root.value.data.value.mapValue.fields.username.stringValue)
                 //setUsername("test")

@@ -9,6 +9,8 @@ function signup() {
     const [redoUsername, setRedoUsername] = useState(false);
     const [redoEmail, setRedoEmail] = useState(false);
     const [redoPassword, setRedoPassword] = useState(false);
+    const [accCreated, setAccCreated] = useState(false);
+    const [plsCreateFirst, setPlsCreateFirst] = useState(false);
 
     function isValidEmailAddress(address) {
       return !! address.match(/.+@.+/);
@@ -16,6 +18,10 @@ function signup() {
 
     const firebaseRegister = e => {
         e.preventDefault();
+        setPlsCreateFirst(false);
+        if(accCreated){
+          return;
+        }
         if(username.length <1){
           setRedoUsername(true);return;
         }else if(username.length > 12){
@@ -50,16 +56,27 @@ function signup() {
                 .set({
                     username: username,
                 })
+                setAccCreated(true);
+                setRedoEmail(false);
+                setRedoUsername(false);
+                setRedoPassword(false);
             })
             .catch(error => alert(error.message))
-        auth
-            .signInWithEmailAndPassword(email, password)
-            .then((auth) => {
-              if (auth) {
-                router.push('/welcome')
-              }
-            })
-            .catch(error => alert(error.message))
+    }
+
+    const firebaseSignin = e => {
+      e.preventDefault();
+      if(!accCreated){
+        setPlsCreateFirst(true);return;
+      }
+      auth
+          .signInWithEmailAndPassword(email, password)
+          .then((auth) => {
+            if (auth) {
+              router.push('/welcome')
+            }
+          })
+          .catch(error => alert(error.message))
     }
 
     return (
@@ -72,20 +89,23 @@ function signup() {
             {redoUsername && ( <div className="border-2 border-solid border-red-200 bg-red-400 rounded-md p-1"><p className="text-white font-semibold text-xs">  Username should be between 1 and 12 characters.</p></div> )}
             {redoEmail && ( <div className="border-2 border-solid border-red-200 bg-red-400 rounded-md p-1"><p className="text-white font-semibold text-xs">  Please enter a correct email form.</p></div> )}
             {redoPassword && ( <div className="border-2 border-solid border-red-200 bg-red-400 rounded-md p-1"><p className="text-white font-semibold text-xs">  Password should be between 6 and 48 characters.</p></div> )}
+            {plsCreateFirst && ( <div className="border-2 border-solid border-red-200 bg-red-400 rounded-md p-1"><p className="text-white font-semibold text-xs">  Please register your account first.</p></div> )}
+            {accCreated && ( <div className="border-2 border-solid border-green-200 bg-green-400 rounded-md p-1"><p className="text-white font-semibold text-xs">  Account created ! Proceed to Sign in.</p></div> )}
                 <form>
                   <label className="text-sm font-semibold mt-2 px-1">
                     Username
-                  <input type='text' className="w-full border border-solid border-gray-400 rounded-md px-1" value={username} onChange={e => setUsername(e.target.value)} placeholder="Wojak Dubled" />
+                  <input type='text' className="w-full border border-solid border-gray-400 rounded-md px-1" disabled={accCreated} value={username} onChange={e => setUsername(e.target.value)} placeholder="Wojak Dubled" />
                   </label>
                   <label className="text-sm font-semibold mt-2 px-1">
                     Email address
-                  <input type='text' className="w-full border border-solid border-gray-400 rounded-md px-1" value={email} onChange={e => setEmail(e.target.value)} placeholder="test@test.test" />
+                  <input type='text' className="w-full border border-solid border-gray-400 rounded-md px-1" disabled={accCreated} value={email} onChange={e => setEmail(e.target.value)} placeholder="test@test.test" />
                   </label>
                   <label className="text-sm font-semibold mt-2 px-1">
                     Password
-                    <input type='password' className="w-full border border-solid border-gray-400 rounded-md px-1" value={password} onChange={e => setPassword(e.target.value)} />
+                    <input type='password' className="w-full border border-solid border-gray-400 rounded-md px-1" disabled={accCreated} value={password} onChange={e => setPassword(e.target.value)} />
                   </label>
-                  <button onClick={firebaseRegister} className="mt-3 button w-full rounded-md" type='submit' >Continue</button>
+                  {accCreated ? (<button onClick={firebaseSignin} className="mt-3 button w-full rounded-md font-bold" type='submit' >Sign in</button>) : (<button onClick={firebaseRegister} className="mt-3 button w-full rounded-md" type='submit' >Register</button>)}
+                  
                 </form>
                 <p className="font-semibold text-center mt-4 text-sm text-gray-600">
                     Reminder: it is not necessary to provide real information.

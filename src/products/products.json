@@ -37,7 +37,7 @@
         "price": 1129.99,
         "description": "Meet one of the finest Fender Telecaster series. Pure and simple, this instrument features classic Fender tone styling that evokes and honors the timeless Fender mainstays that came before it and contributed crucial DNA. From the quietest chord to the loudest note, and from the rear strap button to the top of the head stock, it’s the very essence of classic Fender design.",
         "category": "instruments",
-        "image": "https://drive.google.com/uc?export=view&id=1gGySRol7ZrYIUWZqgFrSgSezlacBSWP6"
+        "image": "https://firebasestorage.googleapis.com/v0/b/new-e-abd00.appspot.com/o/product_deploy1.jpg?alt=media&token=43618bdb-15f1-47e0-a12f-a02285b88185"
     },
     {
         "id": 6,
@@ -45,7 +45,7 @@
         "price": 34.99,
         "description": "Standard skateboards use double kick concave design, which not only offers better balance control to starters and easy to brake, but also easy to perform various tricks. It is a cool present for beginners, kids, teens and experienced riders.",
         "category": "sports & outdoors",
-        "image": "https://drive.google.com/uc?export=view&id=1cFby1TgZJjYifQqgZxUa5IX7zL1t9-Og"
+        "image": "https://firebasestorage.googleapis.com/v0/b/new-e-abd00.appspot.com/o/product_deploy3.jpg?alt=media&token=170e9c13-8d44-4570-b778-43af3f4f3586"
     },
     {
         "id": 7,
@@ -53,7 +53,7 @@
         "price": 44.90,
         "description": "Poker chip set housed in a silver aluminum case also includes two decks of playing cards.",
         "category": "electronics",
-        "image": "https://drive.google.com/uc?export=view&id=1pANZ95vrnO3yn_HfPDuhwWronAlODaeK"
+        "image": "https://firebasestorage.googleapis.com/v0/b/new-e-abd00.appspot.com/o/product_deploy5.jpg?alt=media&token=19837988-eab2-415f-97a0-752dce112698"
     },
     {
       "id": 8,
@@ -66,10 +66,10 @@
     {
         "id": 9,
         "title": "EVGA GeForce RTX 3080 10GB GDDR6X ARGB LED metal backplate",
-        "price": 3150.99,
+        "price": 2799.99,
         "description": "Meet one of the best graphics cards for mining and gaming. The all-new NVIDIA Ampere architecture delivers the ultimate play, featuring advanced 2nd generation Ray Tracing Cores and 3rd generation Tensor Cores with greater throughput.",
         "category": "electronics",
-        "image": "https://drive.google.com/uc?export=view&id=1pg5uAPeBQ6n9xfA5fNMCj0wadkaa06dd"
+        "image": "https://firebasestorage.googleapis.com/v0/b/new-e-abd00.appspot.com/o/product_deploy2.jpg?alt=media&token=7b489b95-1820-406d-b964-723c0c248b2e"
     },
     {
         "id": 10,
@@ -77,7 +77,7 @@
         "price": 120.99,
         "description": "CanaKit Premium High-Gloss Raspberry Pi 4 Case with Integrated Fan Mount, CanaKit Low Noise Bearing System Fan. 128GB Samsung EVO+ Micro SD Card (Class 10) Pre-loaded with NOOBS, USB MicroSD Card Reader.",
         "category": "electronics",
-        "image": "https://drive.google.com/uc?export=view&id=1IsF4rsuIHCxAfx4yRbA64zft9trKIRw9"
+        "image": "https://firebasestorage.googleapis.com/v0/b/new-e-abd00.appspot.com/o/product_deploy4.jpg?alt=media&token=994ba561-f957-46e0-a984-a8f5c5f6b9a7"
     },
     {
       "id": 11,
@@ -93,7 +93,7 @@
       "price": 33.21,
       "description": "Seamlessly move content between your USB Type-C smartphone, tablets and Macs and USB Type-A computers.",
       "category": "electronics",
-      "image": "https://drive.google.com/uc?export=view&id=1KLvoA-c9vtM5d5YUqY4Mv4SeBDe_32Gq"
+      "image": "https://firebasestorage.googleapis.com/v0/b/new-e-abd00.appspot.com/o/product_deploy8.jpg?alt=media&token=7c5b5351-a78a-4e9c-a318-529c67c36081"
     },
     {
       "id": 13,
@@ -133,7 +133,7 @@
       "price": 299.99,
       "description": "Oculus Quest 2 is our most advanced all-in-one VR system yet. Every detail has been engineered to make virtual worlds adapt to your movements, letting you explore awe-inspiring games and experiences with unparalleled freedom.",
       "category": "electronics",
-      "image": "https://drive.google.com/uc?export=view&id=1zEdPhXsjka0uZ8jNq84MsWqq0V5vbJYw"
+      "image": "https://firebasestorage.googleapis.com/v0/b/new-e-abd00.appspot.com/o/product_deploy7.jpg?alt=media&token=8323942a-410d-4a85-87d3-d51cc50d764b"
     },
     {
         "id": 18,
@@ -141,7 +141,7 @@
         "price": 209.99,
         "description": "UITABLE FOR GAMING AND WORKING：AutoFull is dedicated to making the best gaming chair and creating the most perfect game experience for pro gamers.Dimensions: 20.9''(L) x 20.9''(W) x47.6''-50.8''(H); Sitting Area Dimensions: 16.1''(L) x 20.9''(W)",
         "category": "home office furniture",
-        "image": "https://drive.google.com/uc?export=view&id=1gwF9O4rl4EvTBdC-B4-p39eCnomPqU3v"
+        "image": "https://firebasestorage.googleapis.com/v0/b/new-e-abd00.appspot.com/o/product_deploy6.jpg?alt=media&token=cfe8b694-aa1a-4fdf-aaac-c03fe2088ae1"
     },
     {
         "id": 19,
@@ -149,7 +149,7 @@
         "price": 189.99,
         "description": "60'(L)*27'(W)*30'(H) dimension the gaming computer desk can provide massive space to lay 2-3 monitors or screens.It is the perfect addition to your study room, bedroom or office, to serve as a computer desk, home office workstation, study table, writing or gaming desk.",
         "category": "home office furniture",
-        "image": "https://drive.google.com/uc?export=view&id=1jYqkhFr1OTLLmABxfXLPdBKS9K7bF4Tk"
+        "image": "https://firebasestorage.googleapis.com/v0/b/new-e-abd00.appspot.com/o/product_deploy9.jpg?alt=media&token=7280e595-6920-4186-bf94-8c353c1373b4"
     },
     {
       "id": 20,
