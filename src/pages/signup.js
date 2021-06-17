@@ -6,12 +6,40 @@ function signup() {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [redoUsername, setRedoUsername] = useState(false);
+    const [redoEmail, setRedoEmail] = useState(false);
+    const [redoPassword, setRedoPassword] = useState(false);
+
+    function isValidEmailAddress(address) {
+      return !! address.match(/.+@.+/);
+    }
 
     const firebaseRegister = e => {
         e.preventDefault();
+        if(username.length <1){
+          setRedoUsername(true);return;
+        }else if(username.length > 12){
+          setRedoUsername(true);return;
+        }else{
+          setRedoUsername(false);
+        }
+        if(email.length <8){
+          setRedoEmail(true);return;
+        }else if(email.length > 32){
+          setRedoEmail(true);return;
+        }else if(isValidEmailAddress(email) === false){
+          setRedoEmail(true);return;
+        }else{
+          setRedoEmail(false);
+        }
+        if(password.length <6){
+          setRedoPassword(true);return;
+        }else if(password.length >48){
+          setRedoPassword(true);return;
+        }
+
         auth
             .createUserWithEmailAndPassword(email,password)
-            .signInWithEmailAndPassword(email, password)
             .then((auth) => {
                 //it successfully created a new user with email and password.
                 db
@@ -22,9 +50,14 @@ function signup() {
                 .set({
                     username: username,
                 })
-                if (auth) {
-                  router.push('/welcome')
-                }
+            })
+            .catch(error => alert(error.message))
+        auth
+            .signInWithEmailAndPassword(email, password)
+            .then((auth) => {
+              if (auth) {
+                router.push('/welcome')
+              }
             })
             .catch(error => alert(error.message))
     }
@@ -36,6 +69,9 @@ function signup() {
             <h1 className="text-left text-2xl font-semibold px-1 mb-2">
               Sign-Up Form
             </h1>
+            {redoUsername && ( <div className="border-2 border-solid border-red-200 bg-red-400 rounded-md p-1"><p className="text-white font-semibold text-xs">  Username should be between 1 and 12 characters.</p></div> )}
+            {redoEmail && ( <div className="border-2 border-solid border-red-200 bg-red-400 rounded-md p-1"><p className="text-white font-semibold text-xs">  Please enter a correct email form.</p></div> )}
+            {redoPassword && ( <div className="border-2 border-solid border-red-200 bg-red-400 rounded-md p-1"><p className="text-white font-semibold text-xs">  Password should be between 6 and 48 characters.</p></div> )}
                 <form>
                   <label className="text-sm font-semibold mt-2 px-1">
                     Username

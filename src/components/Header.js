@@ -114,7 +114,7 @@ function Header() {
                     
                     
                     <div onClick={handleSignOutOrIn} className="link">
-                        <p className="text-lg">{session ? `Hello, ${session.user.name}`: `Hello, ${username}`}</p>
+                        <p className="text-lg line-clamp-1">{session ? `Hello, ${session.user.name}`: `Hello, ${username}`}</p>
                         <p className="font-extrabold md:text-sm">{RenderSignoutIf()}</p>
                     </div>
 
