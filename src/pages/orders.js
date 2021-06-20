@@ -53,7 +53,7 @@ function orders({orders}) {
                 return orders.length
             }else{
                 console.log("warning! - orders object is undefined.")
-                return 1
+                return 0
             }
         }
     }
