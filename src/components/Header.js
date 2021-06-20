@@ -50,7 +50,6 @@ function Header() {
     if(firebaseUser){
         if(session){
             console.log('WARNING - Double auth detected');
-            signOut();
         }
     }
 

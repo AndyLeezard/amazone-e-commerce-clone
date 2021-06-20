@@ -10,6 +10,7 @@ function orders({orders}) {
     const [session] = useSession();
     const firebaseUser = auth.currentUser;
     const [fborders,setOrders] = useState([]);
+    const [fbordersLength,setFbOrdersLength] = useState(0);
 
     useEffect(()=> {
         if(firebaseUser){
@@ -44,10 +45,16 @@ function orders({orders}) {
     }*/
 
     const basketLength = () => {
-        if(typeof orders !== "undefined"){
-            return orders.length
+        if(firebaseUser){
+            console.log("firebaseUser detected - orders length is :",fborders.length)
+            return fborders.length
         }else{
-            return 0
+            if(typeof orders !== "undefined"){
+                return orders.length
+            }else{
+                console.log("warning! - orders object is undefined.")
+                return 1
+            }
         }
     }
 
@@ -57,7 +64,7 @@ function orders({orders}) {
             <main className="max-w-screen-lg mx-auto p-10">
                 <h1 className="text-3xl border-b mb-2 pb-1 border-yellow-400">Your orders</h1>
                 {session || firebaseUser ? (
-                    <h2>{basketLength()} Orders</h2>
+                    <h2>{basketLength()} Order(s)</h2>
                 ):(
                     <h2>Please sign in to see your orders</h2>
                 )}

@@ -48,7 +48,10 @@ function Order({id, amount, amountShipping, items, timestamp, images, eventID}) 
                     ))}
                 </div>
             </div>
-            <button onClick={removeOrder}>Remove order</button>
+            <div className="w-full flex justify-center lg:justify-end my-4">
+                <button className="button p-1 font-semibold mx-5 w-64 h-8 lg:w-auto lg:h-auto" onClick={removeOrder}>Remove order</button>
+            </div>
+            
         </div>
     )
 }

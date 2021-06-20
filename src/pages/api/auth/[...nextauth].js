@@ -36,8 +36,6 @@ const options = {
     verifyRequest: '/auth/verify-request', // (used for check email message)
     newUser: '/welcome' // If set, new users will be directed here on first sign in
   },
-  callbacks: { },
-  events: { },
   // A database is optional, but required to persist accounts in a database
 }
 
