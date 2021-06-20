@@ -1,7 +1,8 @@
 import moment from 'moment';
 import Currency from 'react-currency-formatter';
+import {db} from "../../firebase";
 
-function Order({id, amount, amountShipping, items, timestamp, images}) {
+function Order({id, amount, amountShipping, items, timestamp, images, eventID}) {
     console.log("order ",id, "has as items :", items);
 
     const orderLength = () => {
@@ -10,6 +11,15 @@ function Order({id, amount, amountShipping, items, timestamp, images}) {
         }else{
             return 1
         }
+    }
+
+    const removeOrder = () => {
+        db
+            .collection('users')
+            .doc(eventID)
+            .collection('orders')
+            .doc(id)
+            .delete()
     }
 
     return (
@@ -38,6 +48,7 @@ function Order({id, amount, amountShipping, items, timestamp, images}) {
                     ))}
                 </div>
             </div>
+            <button onClick={removeOrder}>Remove order</button>
         </div>
     )
 }

@@ -32,14 +32,14 @@ function CheckoutProduct({ id, title, price, rating, description, category, imag
                 <Currency quantity={price} currency="usd"/>
                 {hasPrime && (
                     <div className="flex items-center space-x-2">
-                        <img loading="lazy" className="w-12" src="https://links.papareact.com/fdw" alt="" />
+                        <img loading="lazy" className="w-12" src="/prime.svg" alt="" />
                         <p className="text-xs text-gray-500">FREE Next-day delivery</p>
                     </div>
                 )}
             </div>
             {/** Right add/remove buttons */}
             <div className="flex flex-col space-y-2 my-auto justify-self-end">
-                <button onClick={removeItem} className="button mt-auto">Remove from Basket</button>
+                <button onClick={removeItem} className="button mt-auto">Remove from Cart</button>
             </div>
             
         </div>

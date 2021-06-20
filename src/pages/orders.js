@@ -71,6 +71,7 @@ function orders({orders}) {
                             items = {items}
                             timestamp = {timestamp}
                             images = {images}
+                            eventID = {session.user.email}
                         />
                     ))}
                     {fborders?.map(({id, amount, amountShipping, items, timestamp, images}) => (
@@ -81,7 +82,9 @@ function orders({orders}) {
                             amountShipping = {amountShipping}
                             items = {items}
                             timestamp = {timestamp}
-                            images = {images}/>
+                            images = {images}
+                            eventID = {firebaseUser.email}
+                            />
                     ))}
                 </div>
             </main>
