@@ -10,7 +10,6 @@ function orders({orders}) {
     const [session] = useSession();
     const firebaseUser = auth.currentUser;
     const [fborders,setOrders] = useState([]);
-    const [fbordersLength,setFbOrdersLength] = useState(0);
 
     useEffect(()=> {
         if(firebaseUser){

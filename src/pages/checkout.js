@@ -98,7 +98,7 @@ function checkout() {
                                 Sign in to checkout
                                 </button></a>
                                 ) : (
-                                <button role="link" onClick={createCheckoutSession} className="button mt-2">
+                                <button role="link" onClick={createCheckoutSession} className="button mt-2 font-semibold">
                                 Proceed to checkout
                                 </button>
                                 ) }

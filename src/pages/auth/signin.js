@@ -49,7 +49,7 @@ export default function signin({ providers}) {
                       Password
                       <input type='password' className="w-full border border-solid border-gray-400 rounded-md px-1" value={password} onChange={e => setPassword(e.target.value)} />
                     </label>
-                    <button onClick={firebaseSignIn} className="mt-3 button w-full rounded-md" type='submit' >Continue</button>
+                    <button onClick={firebaseSignIn} className="mt-3 button w-full rounded-md font-semibold" type='submit' >Continue</button>
                   </form>
                   <p className="text-center mt-4 text-sm text-gray-600">
                       By signing-in, you agree to the "ÀMAZONE.LEE" conditions of Use.
@@ -59,7 +59,7 @@ export default function signin({ providers}) {
             <h2 className="mx-auto w-4/5 sm:w-3/5 md:w-2/5 lg:w-1/5 border-t border-solid border-gray-300 mt-2.5 mb-2.5" ><span className="absoulte text-gray-600 text-sm bg-white pb-2.5">New to ÀMAZONE.LEE?</span></h2>
           </div>
           <div className="mx-auto w-4/5 sm:w-3/5 md:w-2/5 lg:w-1/5 p-1">
-            <button onClick={() => router.push('/signup')} className="p-2 w-11/12 text-xs md:text-sm bg-gradient-to-b from-gray-200 to-gray-400 border border-gray-300 rounded-md focus:outline-none focus:ring-gray-500 active:from-gray-500">Create your Àmazone account</button>
+            <button onClick={() => router.push('/signup')} className="p-2 w-11/12 text-xs md:text-sm bg-gradient-to-b from-gray-200 to-gray-400 border border-gray-300 rounded-md focus:outline-none focus:ring-gray-500 active:from-gray-500 font-semibold">Create your Àmazone account</button>
           </div>
           <div className="mx-auto mt-4">
             <h2 className="mx-auto w-4/5 sm:w-3/5 md:w-2/5 lg:w-1/5 border-t border-solid border-gray-300 mt-2.5 mb-2.5" ><span className="absoulte text-gray-600 text-sm bg-white pb-2.5">Easier options are available !</span></h2>
