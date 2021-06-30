@@ -11,7 +11,7 @@ function conditions() {
                 <img className="mx-auto my-2 object-contain cursor-pointer" onClick={() => router.push('/')} src='/logo_side6.svg' width={150}/>
                 <p className=""></p>
                 <h1 class="font-bold text-lg text-gray-100 text-center subpixel-antialiased">Conditions of Use</h1>
-                <h1 class="font-semibold text-sm text-gray-200 text-center">Last updated: June 15, 2021</h1>
+                <h1 class="font-semibold text-sm text-gray-200 text-center">Last updated: June 30, 2021</h1>
                 <div className="mx-auto text-center">
                     <p class="font-bold text-red-500 mt-4">Disclaimer: <span class="font-semibold text-gray-50">this is not the official Amazon Store.</span></p>
                     <p class="font-semibold text-gray-50">It is a redesign, built purely for educational purposes.</p>
