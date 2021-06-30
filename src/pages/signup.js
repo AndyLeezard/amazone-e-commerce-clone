@@ -24,7 +24,7 @@ function signup() {
         }
         if(username.length <1){
           setRedoUsername(true);return;
-        }else if(username.length > 12){
+        }else if(username.length > 16){
           setRedoUsername(true);return;
         }else{
           setRedoUsername(false);
@@ -43,16 +43,15 @@ function signup() {
         }else if(password.length >48){
           setRedoPassword(true);return;
         }
+        var loweremail = email.toLowerCase();
 
         auth
-            .createUserWithEmailAndPassword(email,password)
-            .then((auth) => {
+            .createUserWithEmailAndPassword(loweremail,password)
+            .then(() => {
                 //it successfully created a new user with email and password.
                 db
                 .collection('users')
-                .doc(email)
-                .collection('username')
-                .doc(username)
+                .doc(loweremail)
                 .set({
                     username: username,
                 })

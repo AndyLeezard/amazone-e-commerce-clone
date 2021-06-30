@@ -30,14 +30,17 @@ function Header() {
             db
             .collection('users') //select(create) a firestore collection named users
             .doc(authUser.email) //fetch the user data and register it inside the collection
-            .collection('username') //select(create) a firestore collection named users within the parent collection('users')
-            .onSnapshot((doc) => {
-                console.log("Current data: ", doc);
-                console.log("Current data: ", doc._delegate._snapshot.docs.keyedMap.root.value.data.value.mapValue.fields.username.stringValue);
-                setUsername(doc._delegate._snapshot.docs.keyedMap.root.value.data.value.mapValue.fields.username.stringValue)
-                //setUsername("test")
-                console.log("The Firebase Auth User's name is :",username)
-            });
+            .get()
+            .then((doc) => {
+                if (doc.exists) {
+                    //console.log("Document data:", doc.data().username);
+                    setUsername(doc.data().username);
+                    console.log("The Firebase Auth User's name is :",username)
+                } else {
+                    // doc.data() will be undefined in this case
+                    console.log("No such document!");
+                }
+            })
           }else{
             //dispatch(setUser(null))
             setUsername('Guest');
