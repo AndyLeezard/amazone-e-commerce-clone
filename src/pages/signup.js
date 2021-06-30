@@ -6,9 +6,9 @@ function signup() {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [redoUsername, setRedoUsername] = useState(false);
-    const [redoEmail, setRedoEmail] = useState(false);
-    const [redoPassword, setRedoPassword] = useState(false);
+    const [redoInfo, setRedoInfo] = useState(false);
+    const [msg_error, setmsg_error] = useState('Incorrect information');
+
     const [accCreated, setAccCreated] = useState(false);
     const [plsCreateFirst, setPlsCreateFirst] = useState(false);
 
@@ -23,25 +23,21 @@ function signup() {
           return;
         }
         if(username.length <1){
-          setRedoUsername(true);return;
+          setRedoInfo(true);setmsg_error("Username is too short");return;
         }else if(username.length > 16){
-          setRedoUsername(true);return;
-        }else{
-          setRedoUsername(false);
+          setRedoInfo(true);setmsg_error("Username is too long");return;
         }
         if(email.length <8){
-          setRedoEmail(true);return;
+          setRedoInfo(true);setmsg_error("Incorrect email format - too short");return;
         }else if(email.length > 32){
-          setRedoEmail(true);return;
+          setRedoInfo(true);setmsg_error("Incorrect email format - too long");return;
         }else if(isValidEmailAddress(email) === false){
-          setRedoEmail(true);return;
-        }else{
-          setRedoEmail(false);
+          setRedoInfo(true);setmsg_error("Incorrect email format");return;
         }
         if(password.length <6){
-          setRedoPassword(true);return;
+          setRedoInfo(true);setmsg_error("Password is too simple");return;
         }else if(password.length >48){
-          setRedoPassword(true);return;
+          setRedoInfo(true);setmsg_error("Password is too long");return;
         }
         var loweremail = email.toLowerCase();
 
@@ -56,11 +52,14 @@ function signup() {
                     username: username,
                 })
                 setAccCreated(true);
-                setRedoEmail(false);
-                setRedoUsername(false);
-                setRedoPassword(false);
+                setRedoInfo(false);
             })
-            .catch(error => alert(error.message))
+            .catch(error => errorMsg(error.message))
+    }
+
+    const errorMsg = (e) => {
+      setmsg_error(e);
+      setRedoInfo(true);
     }
 
     const firebaseSignin = e => {
@@ -85,9 +84,7 @@ function signup() {
             <h1 className="text-left text-2xl font-semibold px-1 mb-2">
               Sign-Up Form
             </h1>
-            {redoUsername && ( <div className="border-2 border-solid border-red-200 bg-red-400 rounded-md p-1"><p className="text-white font-semibold text-xs">  Username should be between 1 and 12 characters.</p></div> )}
-            {redoEmail && ( <div className="border-2 border-solid border-red-200 bg-red-400 rounded-md p-1"><p className="text-white font-semibold text-xs">  Please enter a correct email form.</p></div> )}
-            {redoPassword && ( <div className="border-2 border-solid border-red-200 bg-red-400 rounded-md p-1"><p className="text-white font-semibold text-xs">  Password should be between 6 and 48 characters.</p></div> )}
+            {redoInfo && ( <div className="border-2 border-solid border-red-200 bg-red-400 rounded-md p-1"><p className="text-white font-semibold text-xs">  {msg_error}</p></div> )}
             {plsCreateFirst && ( <div className="border-2 border-solid border-red-200 bg-red-400 rounded-md p-1"><p className="text-white font-semibold text-xs">  Please register your account first.</p></div> )}
             {accCreated && ( <div className="border-2 border-solid border-green-200 bg-green-400 rounded-md p-1"><p className="text-white font-semibold text-xs">  Account created ! Proceed to Sign in.</p></div> )}
                 <form>
@@ -108,7 +105,7 @@ function signup() {
                 </form>
                 <p className="font-semibold text-center mt-4 text-sm text-gray-600">
                     Reminder: it is not necessary to provide real information.
-                    By signing-in, you agree to the "ÀMAZONE.LEE" conditions of Use.
+                    By signing-in, you agree to the "ÀMAZONE.LEE" <a href="/conditions">Conditions of Use</a>.
                 </p>
         </div>
         <div className="mx-auto mt-2">

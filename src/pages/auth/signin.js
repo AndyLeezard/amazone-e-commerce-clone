@@ -8,6 +8,8 @@ export default function signin({ providers}) {
   const [session] = useSession();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [redoInfo, setRedoInfo] = useState(false);
+  const [msg_error, setmsg_error] = useState('Incorrect information');
   //const [authprocess,setAuthprocess] = useState(true);
   //console.log("authprocess is ", authprocess)
   //const router = useRouter();
@@ -27,10 +29,15 @@ export default function signin({ providers}) {
 
     auth
         .signInWithEmailAndPassword(email, password)
-        .then(auth => {
+        .then(() => {
           router.push('/')
         })
-        .catch(error => alert(error.message))
+        .catch(error => errorMsg(error.message))
+  }
+
+  const errorMsg = (e) => {
+    setmsg_error(e);
+    setRedoInfo(true);
   }
 
   return (
@@ -40,6 +47,7 @@ export default function signin({ providers}) {
               <h1 className="text-left text-2xl font-semibold px-1 mb-2">
                 Sign-In
               </h1>
+                {redoInfo && ( <div className="border-2 border-solid border-red-200 bg-red-400 rounded-md p-1"><p className="text-white font-semibold text-xs">  {msg_error}</p></div> )}
                   <form method='post' action='/api/auth/signin/credentials'>
                     <label className="text-sm font-semibold mt-2 px-1">
                       Email address
@@ -52,7 +60,7 @@ export default function signin({ providers}) {
                     <button onClick={firebaseSignIn} className="mt-3 button w-full rounded-md font-semibold" type='submit' >Continue</button>
                   </form>
                   <p className="text-center mt-4 text-sm text-gray-600">
-                      By signing-in, you agree to the "ÀMAZONE.LEE" conditions of Use.
+                      By signing-in, you agree to the "ÀMAZONE.LEE" <a href="/conditions">Conditions of Use</a>.
                   </p>
           </div>
           <div className="mx-auto mt-2">
