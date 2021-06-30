@@ -1,33 +1,6 @@
 import { signIn } from 'next-auth/client'
 
 function Loginbutton({ provider_name, provider_id }) {
-
-    /*const theIcon = () => {
-        if(provider_name==="Google"){
-            //console.log("it matches Google")
-            return ("Google")
-        }else if(provider_name==="GitHub"){
-            //console.log("it matches GitHub")
-            return (provider_name)
-        }else{
-            console.log("WARNING - the app is trying to reach an unknownProvider named :", provider_name, "Let the developer update.", "..")
-            console.log("For information, the unknown provider's id is :", provider_id)
-            return (provider_name)
-        }
-    }
-
-    const isProvider = () => {
-        if(provider_name!=="Google" && provider_name!=="GitHub"){
-            return (false)
-        }else{
-            return (true)
-        }
-    }*/
-    //console.log(theIcon())
-    
-    //console.log("provider name : ",provider_name)
-    //console.log(provider_name,"'s provider id is :",provider_id)
-
     return (
         <div>
             <div className="flex mb-5" key={provider_name}>

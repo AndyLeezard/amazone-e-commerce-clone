@@ -1,14 +1,15 @@
 import firebase from "firebase";
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+//capitalizing it won't work.
 const firebaseConfig = {
-  apiKey: "AIzaSyAekKRPD9FivPKND33QXPTwPZ21kxn7vfc",
-  authDomain: "new-e-abd00.firebaseapp.com",
-  projectId: "new-e-abd00",
-  storageBucket: "new-e-abd00.appspot.com",
-  messagingSenderId: "905130006151",
-  appId: "1:905130006151:web:245288fa448af888510a22",
-  measurementId: "G-GXHB6VTQGE"
+  apiKey: process.env.firebase_apiKey,
+  authDomain: process.env.firebase_authDomain,
+  projectId: process.env.firebase_projectId,
+  storageBucket: process.env.firebase_storageBucket,
+  messagingSenderId: process.env.firebase_messagingSenderId,
+  appId: process.env.firebase_appId,
+  measurementId: process.env.firebase_measurementId
 };
 
 const app = !firebase.apps.length

@@ -3,10 +3,8 @@ import { MenuIcon, SearchIcon, ShoppingCartIcon } from "@heroicons/react/outline
 import { signIn, signOut, useSession } from "next-auth/client";
 import { useRouter } from "next/router";
 import { useSelector } from "react-redux";
-import { selectItems } from "../slices/basketSlice"; //selectUser
+import { selectItems } from "../slices/basketSlice";
 import { db, auth } from '../../firebase';
-//import { useDispatch } from "react-redux";
-//import { setUser } from "../slices/basketSlice";
 
 function Header() {
     const [username, setUsername] = useState('');
@@ -15,18 +13,14 @@ function Header() {
     const router = useRouter();
     const firebaseUser = auth.currentUser;
     const items = useSelector(selectItems);
-    //const fbemail = useSelector(selectUser);
-    //console.log("fbemail value : ", fbemail);
 
     useEffect(() => {
-        //will only run once the app component loads...
         auth.onAuthStateChanged((authUser) => {
           console.log('Firebase Auth User >>>', authUser);
     
           if(authUser) {
             // the user just logged in / the user was logged in.
             console.log("Firebase Auth user detected, authUser email :",authUser.email)
-            //dispatch(setUser(authUser.email))
             db
             .collection('users') //select(create) a firestore collection named users
             .doc(authUser.email) //fetch the user data and register it inside the collection
@@ -42,14 +36,12 @@ function Header() {
                 }
             })
           }else{
-            //dispatch(setUser(null))
             setUsername('Guest');
             // the user is logged out.
           }
         })
       }, [])
 
-    //console.log('Firebase user status >>>', firebaseUser);
     if(firebaseUser){
         if(session){
             console.log('WARNING - Double auth detected');

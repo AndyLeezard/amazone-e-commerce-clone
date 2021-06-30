@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { getProviders, useSession } from 'next-auth/client'; //signOut, useSession
+import { getProviders, useSession } from 'next-auth/client';
 import Loginbutton from '../../components/Loginbutton';
 import router from 'next/router';
 import { auth } from '../../../firebase';
@@ -10,15 +10,7 @@ export default function signin({ providers}) {
   const [password, setPassword] = useState('');
   const [redoInfo, setRedoInfo] = useState(false);
   const [msg_error, setmsg_error] = useState('Incorrect information');
-  //const [authprocess,setAuthprocess] = useState(true);
-  //console.log("authprocess is ", authprocess)
-  //const router = useRouter();
-  //const firebaseUser = auth.currentUser;
 
-  /*if(firebaseUser){
-    console.log("SignIn Page: a firebase user is detected - trying to signOut.")
-    auth.signOut();
-  }*/
   if(session){
     console.log("SignIn Page: a NextAuth user is detected - go back to the main page")
     router.push('/')
@@ -96,23 +88,3 @@ export async function getServerSideProps(context){
     props: { providers }
   }
 }
-
-//onClick={() => signIn('credentials', { username: 'jsmith', password: '1234' })}
-
-/*
-// If older than Next.js 9.3
-SignIn.getInitialProps = async () => {
-  return {
-    providers: await getProviders()
-  }
-}
-
-        <div key={provider.name}>
-          <button onClick={() => signIn(provider.id)}>Sign in with {provider.name}</button>
-        </div>
-{Object.values(providers).map(provider => (
-        <div key={provider.name}>
-          <button onClick={() => signIn(provider.id)}>Sign in with {provider.name}</button>
-        </div>
-      ))}
-*/

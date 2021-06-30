@@ -26,22 +26,13 @@ function orders({orders}) {
                     images: order.data().images,
                     timestamp: moment(order.data().timestamp.toDate()).unix(),
                     items: order.data().images, //this is for the quantity and the images are formatted as an array so this is handy.
-                    //When individual quantities come in this value should be adjusted somehow.
+                    //If individual quantities have to be rendered later on, this algorithm should be modified accordingly.
                 })))
             )); //iterate the ordered items
         }else{
             setOrders([])
         }
     }, [])
-    
-
-    /*const either = () =>{
-        if(firebaseUser || session){
-            return true
-        }else{
-            return false
-        }
-    }*/
 
     const basketLength = () => {
         if(firebaseUser){

@@ -7,13 +7,13 @@ import "firebase/firestore"
 
 const firestore = (
   firebase.apps[0] ?? firebase.initializeApp(
-    {apiKey: "AIzaSyAekKRPD9FivPKND33QXPTwPZ21kxn7vfc",
-      authDomain: "new-e-abd00.firebaseapp.com",
-      projectId: "new-e-abd00",
-      storageBucket: "new-e-abd00.appspot.com",
-      messagingSenderId: "905130006151",
-      appId: "1:905130006151:web:245288fa448af888510a22",
-      measurementId: "G-GXHB6VTQGE"})
+    {apiKey: process.env.APIKEY,
+      authDomain: process.env.AUTHDOMAIN,
+      projectId: process.env.PROJECTID,
+      storageBucket: process.env.STORAGEBUCKET,
+      messagingSenderId: process.env.MESSAGINGSENDERID,
+      appId: process.env.APPID,
+      measurementId: process.env.MEASUREMENTID})
 ).firestore()
 
 const options = {

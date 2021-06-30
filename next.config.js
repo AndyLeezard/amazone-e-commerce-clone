@@ -2,7 +2,7 @@
 
 module.exports = {
     images: {
-        domains: ["links.papareact.com","fakestoreapi.com"],
+        domains: ["fakestoreapi.com"],
     },
     env: {
         host: process.env.HOST,
@@ -16,5 +16,13 @@ module.exports = {
         stripe_public_key: process.env.STRIPE_PUBLIC_KEY,
         stripe_secret_key: process.env.STRIPE_SECRET_KEY,
         stripe_signing_key: process.env.STRIPE_SIGNING_SECRET,
+
+        firebase_apiKey: process.env.APIKEY,
+        firebase_authDomain: process.env.AUTHDOMAIN,
+        firebase_projectId: process.env.PROJECTID,
+        firebase_storageBucket: process.env.STORAGEBUCKET,
+        firebase_messagingSenderId: process.env.MESSAGINGSENDERID,
+        firebase_appId: process.env.APPID,
+        firebase_measurementId: process.env.MEASUREMENTID,
     }
 };

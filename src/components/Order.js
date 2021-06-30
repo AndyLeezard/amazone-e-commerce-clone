@@ -24,7 +24,7 @@ function Order({id, amount, amountShipping, items, timestamp, images, eventID}) 
             .collection('orders')
             .doc(id)
             .delete()
-            //.then(() => {window.location.reload();})
+            //.then(() => {window.location.reload();}) //if needed
     }
 
     return (
